@@ -1,15 +1,40 @@
 {
-  "devDependencies": {
-    "flow-bin": "^0.39.0"
-  },
-  "name": "recipes-to-list",
-  "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {},
-  "scripts": {
-  },
-  "author": "trungutt",
-  "license": "MIT",
-  "homepage": "https://github.com/trungutt/RecipesToList#readme",
-  "description": "Recipes to list"
+	"devDependencies": {
+		"babel-core": "^6.23.1",
+		"babel-eslint": "^7.1.1",
+		"babel-loader": "^6.3.1",
+		"babel-plugin-transform-flow-strip-types": "^6.22.0",
+		"babel-preset-latest": "^6.22.0",
+		"babel-preset-react": "^6.23.0",
+		"eslint": "^3.15.0",
+		"eslint-config-airbnb": "^14.1.0",
+		"eslint-plugin-flow-vars": "^0.5.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-jsx-a11y": "^4.0.0",
+		"eslint-plugin-react": "^6.9.0",
+		"eslint-watch": "^2.1.14",
+		"file-loader": "^0.10.0",
+		"flow-bin": "^0.39.0",
+		"flow-watch": "^1.1.0",
+		"npm-check": "^5.4.0",
+		"url-loader": "^0.5.7",
+		"webpack": "^2.2.1",
+		"webpack-dev-server": "^2.3.0"
+	},
+	"name": "recipes-to-list",
+	"version": "1.0.0",
+	"main": "index.js",
+	"dependencies": {
+		"css-loader": "^0.26.1",
+		"style-loader": "^0.13.1"
+	},
+	"scripts": {
+		"start": "webpack-dev-server",
+		"lint": "esw webpack.config.* src/**/*.js --color",
+		"lint:watch": "npm run lint -- --watch"
+	},
+	"author": "trungutt",
+	"license": "MIT",
+	"homepage": "https://github.com/trungutt/RecipesToList#readme",
+	"description": "Recipes to list"
 }
