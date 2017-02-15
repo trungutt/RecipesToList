@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "flow-bin": "^0.39.0"
+  },
+  "name": "recipes-to-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+  },
+  "author": "trungutt",
+  "license": "MIT",
+  "homepage": "https://github.com/trungutt/RecipesToList#readme",
+  "description": "Recipes to list"
+}
