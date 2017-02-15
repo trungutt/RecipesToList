@@ -34,7 +34,7 @@ const scriptLoader = {
 };
 const fontLoader = {
 	loaders: ['url-loader'],
-	test: /\.png$/,
+	test: /\.jpg$/,
 };
 const plugins = [new webpack.HotModuleReplacementPlugin()];
 const resolve = {

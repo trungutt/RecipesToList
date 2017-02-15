@@ -15,11 +15,7 @@
 	],
 	"parser": "babel-eslint",
 	"parserOptions": {
-		"sourceType": "module",
-		"ecmaFeatures": {
-			"experimentalObjectRestSpread": true,
-			"jsx": true
-		}
+		"sourceType": "module"
 	},
 	"rules": {
 		"no-tabs": "off",
