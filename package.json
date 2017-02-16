@@ -4,6 +4,7 @@
 		"babel-eslint": "^7.1.1",
 		"babel-loader": "^6.3.1",
 		"babel-plugin-transform-flow-strip-types": "^6.22.0",
+		"babel-plugin-transform-object-rest-spread": "^6.23.0",
 		"babel-preset-latest": "^6.22.0",
 		"babel-preset-react": "^6.23.0",
 		"eslint": "^3.15.0",
@@ -25,14 +26,20 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"dependencies": {
+		"chai": "^3.5.0",
 		"css-loader": "^0.26.1",
+		"mocha": "^3.2.0",
 		"redux": "^3.6.0",
 		"style-loader": "^0.13.1"
 	},
 	"scripts": {
 		"start": "webpack-dev-server",
 		"lint": "esw webpack.config.* src/**/*.js --color",
-		"lint:watch": "npm run lint -- --watch"
+		"lint:watch": "npm run lint -- --watch",
+		"test": "mocha --reporter progress --compilers js:babel-core/register src/**/*.spec.js",
+		"test:watch": "npm run test -- --watch",
+		"typecheck": "flow",
+		"typecheck:watch": "flow-watch"
 	},
 	"author": "trungutt",
 	"license": "MIT",
