@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
-import RecipeContent from '../components/RecipeContent';
+import RecipeContent from '../components/RecipeContent/RecipeContent';
 
 //TODO : export selector
 const recipesSelector = state => state.entities.recipes;

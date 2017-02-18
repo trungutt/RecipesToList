@@ -30,7 +30,7 @@ const scriptLoader = {
 	loader: 'babel-loader',
 	include: path.resolve(__dirname, 'src'),
 	exclude: /node_modules/,
-	test: /\.jsx$|\.js$/,
+	test: /\.js$/,
 };
 const fontLoader = {
 	loaders: ['url-loader'],

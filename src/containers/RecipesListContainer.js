@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
+import { createSelector } from 'reselect';
 
-import RecipesList from '../components/RecipesList';
+import RecipesList from '../components/RecipesList/RecipesList';
 
 // TODO: move to selectors.js
 const selector = (entities) => {
@@ -14,8 +15,15 @@ const selector = (entities) => {
 	return recipesList;
 };
 
-const mapStateToProps = ({ entities }) => ({
-	recipes: selector(entities),
+const recipesSelector = state => state.entities.recipes;
+const getRecipesList = recipes => recipes;
+const selectRecipesList = createSelector(
+	recipesSelector,
+	getRecipesList,
+);
+
+const mapStateToProps = state => ({
+	recipes: selectRecipesList(state),
 });
 
 const mapDispatchToProps = dispatch => ({
