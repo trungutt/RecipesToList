@@ -28,9 +28,16 @@
 	"dependencies": {
 		"chai": "^3.5.0",
 		"css-loader": "^0.26.1",
+		"material-ui": "^0.17.0",
 		"mocha": "^3.2.0",
+		"react": "^15.4.2",
+		"react-dom": "^15.4.2",
+		"react-redux": "^5.0.2",
+		"react-tap-event-plugin": "^2.0.1",
 		"redux": "^3.6.0",
-		"style-loader": "^0.13.1"
+		"reselect": "^2.5.4",
+		"style-loader": "^0.13.1",
+		"styled-components": "^1.4.3"
 	},
 	"scripts": {
 		"start": "webpack-dev-server",

@@ -1,23 +1,43 @@
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-const reducer = (state, action) => {
-	if (action.type === 'HEY') {
-		return state + action.payload;
-	}
+import App from './App';
+import initialState from './store';
 
-	return state;
+// TODO: move to reducers.js
+const reducer = (state, action) => {
+	switch (action.type) {
+		case 'SHOW_RECIPE':
+			return {
+				...state,
+				openedRecipe: action.payload,
+			};
+		case 'ADD_RECIPE':
+			return {
+				...state,
+				chosenRecipes: [
+					...state.chosenRecipes,
+					action.payload,
+				],
+			};
+		default:
+			return state;
+	}
 };
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
 	reducer, /* preloadedState, */
-	0,
+	initialState,
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 /* eslint-enable */
 
-store.dispatch({ type: 'HEY', payload: 1 });
-store.dispatch({ type: 'HEY', payload: 2 });
-store.dispatch({ type: 'HEY', payload: 3 });
-store.dispatch({ type: 'HEY', payload: 4 });
-store.dispatch({ type: 'HEY', payload: 5 });
+render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('root'),
+);

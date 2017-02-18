@@ -18,7 +18,7 @@ type Item = {
 };
 type Items = Array<Item>;
 
-const transformJsonArr = (items: Items): Object => {
+const transformJsonResponse = (items: Items): Object => {
 	const state = items.reduce((accumulator, item) => {
 		let ingredientsOfRecipe = {};
 		let ingredients = {};
@@ -69,4 +69,4 @@ const transformJsonArr = (items: Items): Object => {
 	return state;
 };
 
-export default transformJsonArr;
+export default transformJsonResponse;

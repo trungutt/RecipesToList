@@ -4,11 +4,11 @@ import { describe, it } from 'mocha';
 import { expect } from 'chai';
 
 import json from '../source/recipes';
-import transformJsonArr from './getStateFromJson';
+import transformJsonResponse from './getStateFromJson';
 
 describe('getStateFromJsonArr', () => {
 	it('should transform json', () => {
-		const expectedJSON = transformJsonArr(json);
+		const expectedJSON = transformJsonResponse(json);
 
 		/* eslint-disable */
 		expect(expectedJSON).to.deep.equal({
