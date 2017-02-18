@@ -4,17 +4,6 @@ import { createSelector } from 'reselect';
 import RecipesList from '../components/RecipesList/RecipesList';
 
 // TODO: move to selectors.js
-const selector = (entities) => {
-	const { recipes } = entities;
-
-	const recipesList = [];
-	for (const key in recipes) {
-		recipesList.push(recipes[key]);
-	}
-
-	return recipesList;
-};
-
 const recipesSelector = state => state.entities.recipes;
 const getRecipesList = recipes => recipes;
 const selectRecipesList = createSelector(

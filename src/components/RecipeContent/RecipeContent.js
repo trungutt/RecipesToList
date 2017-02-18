@@ -1,7 +1,9 @@
 /* @flow */
 
 import React from 'react';
-import styled from 'styled-components';
+
+import Title from '../Common/Title';
+import Label from '../Common/Label';
 
 
 type RecipeContentArgs = {
@@ -14,14 +16,6 @@ type RecipeContentArgs = {
 		ingredients: Object,
 	}
 };
-
-// TODO: move to different components
-const Title = styled.h1`
-	color: red;
-`;
-const Label = styled.span`
-	font-weight: bold;
-`;
 
 const RecipeContent = ({ recipe }: RecipeContentArgs) => {
 	if (recipe) {

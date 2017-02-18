@@ -1,14 +1,10 @@
 /* @flow */
 
 import React from 'react';
-import styled from 'styled-components';
 
 import Department from '../Department/Department';
+import Title from '../Common/Title';
 
-
-const Title = styled.h1`
-	color: red;
-`;
 
 const ShoppingList = ({ shoppingList }: Object) => {
 	if (Object.keys(shoppingList).length !== 0) {

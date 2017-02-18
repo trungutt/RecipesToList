@@ -22,7 +22,10 @@ const RecipeItem = ({ recipe, onClick, onButtonClick }: AddRecipeArgs) => (
 	<GridTile
 		key={recipe.recipe_id}
 		title={recipe.title}
-		actionIcon={<AddRecipe title={recipe.title} onButtonClick={onButtonClick} />
+		actionIcon={<AddRecipe
+			title={recipe.title}
+			onButtonClick={onButtonClick}
+		/>
 		}
 		onClick={(e) => {
 			e.preventDefault();
