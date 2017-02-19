@@ -1,7 +1,7 @@
 /* @flow */
 
 const getOpenedRecipeContent =
-	(recipes: Object, ingredients: Object, openedRecipe: Object): Object => {
+	(recipes: Object, ingredients: Object, openedRecipe: string): Object => {
 		if (!openedRecipe) {
 			return {};
 		}
