@@ -7,6 +7,7 @@ import RecipesList from '../../components/RecipesList/RecipesList';
 import selectors from '../App/selectors';
 import getRecipesList from './selectors';
 
+import actions from './constants';
 
 const selectRecipesList = createSelector(
 	selectors.recipesSelector,
@@ -19,12 +20,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
 	onClick: (recipeTitle) => {
-		// TODO:move to actions.js
-		dispatch({ type: 'SHOW_RECIPE', payload: recipeTitle });
+		dispatch({ type: actions.SHOW_RECIPE, payload: recipeTitle });
 	},
 	onButtonClick: (recipeTitle) => {
-		// TODO:move to actions.js
-		dispatch({ type: 'ADD_RECIPE', payload: recipeTitle });
+		dispatch({ type: actions.ADD_RECIPE, payload: recipeTitle });
 	},
 });
 

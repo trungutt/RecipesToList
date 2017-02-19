@@ -6,26 +6,7 @@ import { createStore } from 'redux';
 import App from './containers/App/App';
 import initialState from './store';
 
-// TODO: move to reducers.js
-const reducer = (state, action) => {
-	switch (action.type) {
-		case 'SHOW_RECIPE':
-			return {
-				...state,
-				openedRecipe: action.payload,
-			};
-		case 'ADD_RECIPE':
-			return {
-				...state,
-				chosenRecipes: [
-					...state.chosenRecipes,
-					action.payload,
-				],
-			};
-		default:
-			return state;
-	}
-};
+import reducer from './containers/RecipesList/reducer';
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(

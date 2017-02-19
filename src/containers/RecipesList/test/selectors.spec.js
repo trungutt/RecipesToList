@@ -3,7 +3,7 @@
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 
-import getRecipesList from './selectors';
+import getRecipesList from '../selectors';
 
 
 describe('test RecipesList selectors', () => {
