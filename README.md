@@ -20,7 +20,7 @@ In this project I use:
 * [Eslint](http://eslint.org/) (with [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb))
 * [Flow](https://flowtype.org/) for adding static typing checker to JavaScript
 
-I would have used [normalizr](https://github.com/paularmstrong/normalizr) to model Redux store, and [Immutable](https://facebook.github.io/immutable-js/) to make sure that the Redux store should not be mutated.
+I would have used [normalizr](https://github.com/paularmstrong/normalizr) to model Redux store, and [Immutable](https://facebook.github.io/immutable-js/) to make sure that the Redux store should not be mutated. I thought about [React Boilerplate](https://github.com/react-boilerplate/react-boilerplate) at the beginning which offered some interesting features but il would overkill a small React Application.
 
 # Setup
 
