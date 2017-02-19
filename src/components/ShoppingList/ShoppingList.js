@@ -7,7 +7,7 @@ import Title from '../Common/Title';
 
 
 const ShoppingList = ({ shoppingList }: Object) => {
-	if (Object.keys(shoppingList).length !== 0) {
+	if (shoppingList && Object.keys(shoppingList).length !== 0) {
 		return (
 			<div>
 				<Title>Shopping List</Title>

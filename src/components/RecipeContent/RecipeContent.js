@@ -18,7 +18,7 @@ type RecipeContentArgs = {
 };
 
 const RecipeContent = ({ recipe }: RecipeContentArgs) => {
-	if (recipe) {
+	if (recipe && Object.keys(recipe).length !== 0) {
 		const { title, instructions, servings, ingredients } = recipe;
 		return (
 			<div>

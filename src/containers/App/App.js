@@ -6,9 +6,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import styled from 'styled-components';
 import Divider from 'material-ui/Divider';
 
-import RecipesListContainer from './containers/RecipesListContainer';
-import RecipeContentContainer from './containers/RecipeContentContainer';
-import ShoppingListContainer from './containers/ShoppingListContainer';
+import RecipesListContainer from '../RecipesList/RecipesListContainer';
+import RecipeContentContainer from '../RecipeContent/RecipeContentContainer';
+import ShoppingListContainer from '../ShoppingList/ShoppingListContainer';
 
 
 /* Needed for onTouchTap */

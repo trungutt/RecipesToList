@@ -1,13 +1,15 @@
+/* @flow */
+
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 
-import RecipesList from '../components/RecipesList/RecipesList';
+import RecipesList from '../../components/RecipesList/RecipesList';
+import selectors from '../App/selectors';
+import getRecipesList from './selectors';
 
-// TODO: move to selectors.js
-const recipesSelector = state => state.entities.recipes;
-const getRecipesList = recipes => recipes;
+
 const selectRecipesList = createSelector(
-	recipesSelector,
+	selectors.recipesSelector,
 	getRecipesList,
 );
 
