@@ -8,7 +8,7 @@ import getOpenedRecipeContent from './selectors';
 
 describe('test OpenedRecipeContent selectors', () => {
 	it('should return opened recipe\'s content', () => {
-		/* eslint-disable quotes, quote-props*/
+		/* eslint-disable quotes, quote-props, comma-dangle*/
 		const recipes = {
 			'Tomato Cucumber Avocado Salad': {
 				recipe_id: 1,

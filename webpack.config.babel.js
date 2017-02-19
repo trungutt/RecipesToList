@@ -1,17 +1,19 @@
 import path from 'path';
 import webpack from 'webpack';
 
+import {
+	output,
+	scriptLoader,
+	fileLoader,
+	resolve,
+} from './webpack.config.base';
+
 const devtool = 'inline-source-map';
 const entry = [
 	'webpack-dev-server/client?http://localhost:8080',
 	'webpack/hot/only-dev-server',
 	path.join(__dirname, 'src/index'),
 ];
-const output = {
-	path: __dirname,
-	filename: 'bundle.js',
-	publicPath: '/',
-};
 const devServer = {
 	contentBase: path.resolve(__dirname, 'src'),
 	quiet: false,
@@ -26,20 +28,7 @@ const devServer = {
 		chunkModules: false,
 	},
 };
-const scriptLoader = {
-	loader: 'babel-loader',
-	include: path.resolve(__dirname, 'src'),
-	exclude: /node_modules/,
-	test: /\.js$/,
-};
-const fontLoader = {
-	loaders: ['url-loader'],
-	test: /\.jpg$/,
-};
 const plugins = [new webpack.HotModuleReplacementPlugin()];
-const resolve = {
-	extensions: ['.js'],
-};
 
 export default {
 	devtool,
@@ -49,7 +38,7 @@ export default {
 	module: {
 		loaders: [
 			scriptLoader,
-			fontLoader,
+			fileLoader,
 		],
 	},
 	plugins,

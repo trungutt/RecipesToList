@@ -46,7 +46,7 @@ export const getShoppingIngredientsWithUnitDepartment =
 			});
 		}, {});
 
-export const getShoppingList =
+const getShoppingList =
 	(recipes: Object, chosenRecipes: Array<Object>, ingredients: Object): Object => {
 		if (chosenRecipes.length === 0) {
 			return {};

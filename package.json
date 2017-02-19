@@ -20,16 +20,16 @@
 		"flow-bin": "^0.39.0",
 		"flow-watch": "^1.1.0",
 		"npm-check": "^5.4.0",
+		"ntl": "^1.1.3",
 		"url-loader": "^0.5.7",
-		"webpack": "^2.2.1",
 		"webpack-dev-server": "^2.3.0"
 	},
 	"name": "recipes-to-list",
 	"version": "1.0.0",
 	"main": "index.js",
 	"dependencies": {
+		"babel-register": "^6.23.0",
 		"chai": "^3.5.0",
-		"css-loader": "^0.26.1",
 		"enzyme": "^2.7.1",
 		"lodash": "^4.17.4",
 		"material-ui": "^0.17.0",
@@ -41,17 +41,19 @@
 		"react-tap-event-plugin": "^2.0.1",
 		"redux": "^3.6.0",
 		"reselect": "^2.5.4",
-		"style-loader": "^0.13.1",
-		"styled-components": "^1.4.3"
+		"styled-components": "^1.4.3",
+		"webpack": "^2.2.1"
 	},
 	"scripts": {
 		"start": "webpack-dev-server",
+		"build": "webpack --config webpack.prod.config.babel.js",
 		"lint": "esw webpack.config.* src/**/*.js --color",
 		"lint:watch": "npm run lint -- --watch",
 		"test": "mocha --reporter progress --compilers js:babel-core/register src/**/*.spec.js",
 		"test:watch": "npm run test -- --watch",
 		"typecheck": "flow",
-		"typecheck:watch": "flow-watch"
+		"typecheck:watch": "flow-watch",
+		"menu": "ntl"
 	},
 	"author": "trungutt",
 	"license": "MIT",
